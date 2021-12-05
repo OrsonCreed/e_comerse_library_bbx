@@ -65,3 +65,4 @@ console.log(a.totalItemsInStock());
 //the indexes of products refers to the order they were added.
 //so we use the index of the products to update their number of products.
 //this is my first commited file so be ready!
+//this is my second cmmited comment so track it!

@@ -66,3 +66,4 @@ console.log(a.totalItemsInStock());
 //so we use the index of the products to update their number of products.
 //this is my first commited file so be ready!
 //this is my second cmmited comment so track it!
+// try to track this change with git push

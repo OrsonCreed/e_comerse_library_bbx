@@ -62,3 +62,7 @@ console.log(a.addNewProduct("mango",100));
 console.log(a.addNewProduct("apple",200));
 console.log(a.addNewProduct("pinaple",300,3));
 console.log(a.totalItemsInStock());
+//the indexes of products refers to the order they were added.
+//so we use the index of the products to update their number of products.
+
+// git ready to go!

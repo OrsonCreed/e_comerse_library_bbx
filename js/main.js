@@ -1,3 +1,13 @@
+
+/*
+                            documentations
+                            ----------------
+    *the indexes of products refers to the order they were added.
+    *so we use the index of the products to update their number of products.
+    *string numbers are not accepted!
+
+*/
+
 class Stock{
     static NumOfStocks = 0;
     constructor() {
@@ -7,7 +17,7 @@ class Stock{
         this.NumberOfProducts = 0;
     };
             arraySummation = function(arrayName){ //Array should be of the type integer
-                // prease find the way to set this function as the protected member of this class
+                // please find the way to set this mehtod to be the protected member of this class
                 this.counter = 0;
             for (let i = 0; i < arrayName.length; i++) {
                 this.counter = this.counter + arrayName[i];
@@ -17,11 +27,15 @@ class Stock{
             }
 
             addNewProduct = function(product,cost,InitialItems = 1){
-                this.AvailableProducts.push(product);
-                this.productCost.push(cost);
-                this.AvairableNumItems.push(InitialItems);
-                this.NumberOfProducts++;
-                return true;
+                if ((product !="" && isNaN(product)) && (!isNaN(cost) && cost != 0 )) {
+                    this.AvailableProducts.push(product);
+                    this.productCost.push(cost);
+                    this.AvairableNumItems.push(InitialItems);
+                    this.NumberOfProducts++;
+                    return true;
+                }else{
+                    return false;
+                }
                                             }
             
             pushNewItems = function(ItemIndex,NumberOfItems){
@@ -33,8 +47,12 @@ class Stock{
             }
 
             popItems = function(ItemIndex,NumberOfItems){
-                this.AvairableNumItems[ItemIndex] = this.AvairableNumItems[ItemIndex] - NumberOfItems;
-                return true;
+                if (this.AvairableNumItems[ItemIndex] != 0) {
+                    this.AvairableNumItems[ItemIndex] = this.AvairableNumItems[ItemIndex] - NumberOfItems;
+                    return true;
+                }else{
+                    return false;
+                }
             }
 
             updateCost = function(ItemIndex,newCost){
@@ -60,9 +78,7 @@ class Stock{
 var a = new Stock();
 console.log(a.addNewProduct("mango",100));
 console.log(a.addNewProduct("apple",200));
-console.log(a.addNewProduct("pinaple",300,3));
-console.log(a.totalItemsInStock());
-//the indexes of products refers to the order they were added.
-//so we use the index of the products to update their number of products.
 
-// git ready to go!
+
+
+

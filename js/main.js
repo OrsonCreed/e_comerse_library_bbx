@@ -14,10 +14,10 @@ import{Stock} from './stock.js';
 
 //--------------------------------------------testing------------------------------------------
 
+export {Stock};
 
-var a = new Stock();
-console.log(a.addNewProduct("1",100));
-console.log(a.addNewProduct("apple",200));
+
+
 
 
 

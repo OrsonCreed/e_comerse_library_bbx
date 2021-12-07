@@ -1,4 +1,4 @@
-class Stock{
+class Stock extends HTMLElement {
     static NumOfStocks = 0;
     constructor() {
         this.AvailableProducts = [];
